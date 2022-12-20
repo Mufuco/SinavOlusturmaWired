@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mfurk\\source\\repos\\ProjectTek\\ProjectTek.EntityLayer\\ProjectTek.EntityLayer.csproj": {}
+    "C:\\Users\\mfurk\\Desktop\\ExamLast\\ProjectTek\\ProjectTek.EntityLayer\\ProjectTek.EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mfurk\\source\\repos\\ProjectTek\\ProjectTek.EntityLayer\\ProjectTek.EntityLayer.csproj": {
+    "C:\\Users\\mfurk\\Desktop\\ExamLast\\ProjectTek\\ProjectTek.EntityLayer\\ProjectTek.EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mfurk\\source\\repos\\ProjectTek\\ProjectTek.EntityLayer\\ProjectTek.EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\mfurk\\Desktop\\ExamLast\\ProjectTek\\ProjectTek.EntityLayer\\ProjectTek.EntityLayer.csproj",
         "projectName": "ProjectTek.EntityLayer",
-        "projectPath": "C:\\Users\\mfurk\\source\\repos\\ProjectTek\\ProjectTek.EntityLayer\\ProjectTek.EntityLayer.csproj",
+        "projectPath": "C:\\Users\\mfurk\\Desktop\\ExamLast\\ProjectTek\\ProjectTek.EntityLayer\\ProjectTek.EntityLayer.csproj",
         "packagesPath": "C:\\Users\\mfurk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mfurk\\source\\repos\\ProjectTek\\ProjectTek.EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\mfurk\\Desktop\\ExamLast\\ProjectTek\\ProjectTek.EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

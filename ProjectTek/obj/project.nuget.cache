@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RF0E1+okuyRTQBG/lmWaSZCJxLPTdpkveJBs6P0O+Y3q3VaCPfzkmfuXiCIZsIW8vthUU12LCyDKu6jR30gGNA==",
+  "dgSpecHash": "Te14331LlCw3w/mJAxHIFYLgfLAoPD8/ocadnSl5LVwSXFGtkItVunn7kEE8oWNkg+dnjEsUmvQehSEzSHxhPg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mfurk\\source\\repos\\ProjectTek\\ProjectTek\\ProjectTek.csproj",
+  "projectFilePath": "C:\\Users\\mfurk\\Desktop\\ExamLast\\ProjectTek\\ProjectTek\\ProjectTek.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mfurk\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mfurk\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

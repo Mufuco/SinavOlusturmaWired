@@ -10,3 +10,15 @@ C:\Users\mfurk\source\repos\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\P
 C:\Users\mfurk\source\repos\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\refint\ProjectTek.EntityLayer.dll
 C:\Users\mfurk\source\repos\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ProjectTek.EntityLayer.pdb
 C:\Users\mfurk\source\repos\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ref\ProjectTek.EntityLayer.dll
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\bin\Debug\net6.0\ProjectTek.EntityLayer.deps.json
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\bin\Debug\net6.0\ProjectTek.EntityLayer.dll
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\bin\Debug\net6.0\ProjectTek.EntityLayer.pdb
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ProjectTek.EntityLayer.csproj.AssemblyReference.cache
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ProjectTek.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ProjectTek.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ProjectTek.EntityLayer.AssemblyInfo.cs
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ProjectTek.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ProjectTek.EntityLayer.dll
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\refint\ProjectTek.EntityLayer.dll
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ProjectTek.EntityLayer.pdb
+C:\Users\mfurk\Desktop\ExamLast\ProjectTek\ProjectTek.EntityLayer\obj\Debug\net6.0\ref\ProjectTek.EntityLayer.dll

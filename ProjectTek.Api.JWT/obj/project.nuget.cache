@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9Y6wgmjacXXiM0UfLLxbJt6id+iK+YIrWBUHUdthrEsvJ3GrjqNDZ58AZpDSoDylFmPT6HncUZ+y3A8ZAL2B1g==",
+  "dgSpecHash": "Ln93wceIztzRrGMQAmIPtkb9rYO2NTjkZPmk9mjykEEb/F34n4wR4qxaHw4XBoz8LXfDQr1HVTHDP2wLJgyvxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mfurk\\source\\repos\\ProjectTek\\ProjectTek.Api.JWT\\ProjectTek.Api.JWT.csproj",
+  "projectFilePath": "C:\\Users\\mfurk\\Desktop\\ExamLast\\ProjectTek\\ProjectTek.Api.JWT\\ProjectTek.Api.JWT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mfurk\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.11\\microsoft.aspnetcore.authentication.jwtbearer.6.0.11.nupkg.sha512",
     "C:\\Users\\mfurk\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

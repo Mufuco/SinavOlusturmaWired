@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y9+pZAcMSXxk51fv7+5MzJ00rzBJ4iYBdlRKavADkGVElWdkhxKxFtcK5XYmr9CBpUmJ7jymdVh8StY6hV61tQ==",
+  "dgSpecHash": "GKpxOVtyVhYdQrkFYHwpysa5oCmkuumrLMrr8a4s3hMkKWIDZpUC33HmwQWC8MtLOAySNOQk5gw9RVbpz12mRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mfurk\\source\\repos\\ProjectTek\\ProjectTek.BusinessLayer\\ProjectTek.BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\mfurk\\Desktop\\ExamLast\\ProjectTek\\ProjectTek.BusinessLayer\\ProjectTek.BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mfurk\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
     "C:\\Users\\mfurk\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
