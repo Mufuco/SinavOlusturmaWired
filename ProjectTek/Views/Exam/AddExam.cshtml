@@ -1,0 +1,234 @@
+﻿@{
+    ViewData["Title"] = "AddExam";
+    Layout = "~/Views/Shared/_LayoutRe.cshtml";
+}
+
+<form method="post">
+    @await Component.InvokeAsync("ArticlesList")
+
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <input name="Question1" class="form-control form-control-lg" placeholder="Soru 1" />
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-4 ">
+                <input class="form-control form-control-lg" name="Answer1" placeholder="A)" />
+            </div>
+            <div class="offset-1 col-4">
+                <input class="form-control form-control-lg" name="Answer1" placeholder="B)" />
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-4">
+                <input class="form-control form-control-lg" name="Answer1" placeholder="C)" />
+            </div>
+            <div class="offset-1 col-4">
+                <input class="form-control form-control-lg" name="Answer1" placeholder="D)" />
+
+                <div class="col-4 align-self-auto">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="AnswerTr"></select>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <input name="Question2" class="form-control form-control-lg" placeholder="Soru 2" />
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-4 ">
+                <input class="form-control form-control-lg" name="Answer2" placeholder="A)" />
+            </div>
+            <div class="offset-1 col-4">
+                <input class="form-control form-control-lg" name="Answer2" placeholder="B)" />
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-4">
+                <input class="form-control form-control-lg" name="Answer2" placeholder="C)" />
+            </div>
+            <div class="offset-1 col-4">
+                <input class="form-control form-control-lg" name="Answer2" placeholder="D)" />
+                <div class="col-4 align-self-auto">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="AnswerTr2"></select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <input name="Question3" class="form-control form-control-lg" placeholder="Soru 3" />
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-4 ">
+                <input class="form-control form-control-lg" name="Answer3" placeholder="A)" />
+            </div>
+            <div class="offset-1 col-4">
+                <input class="form-control form-control-lg" name="Answer3" placeholder="B)" />
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-4">
+                <input class="form-control form-control-lg" name="Answer3" placeholder="C)" />
+            </div>
+            <div class="offset-1 col-4">
+                <input class="form-control form-control-lg" name="Answer3" placeholder="D)" />
+                <div class="col-4 align-self-auto">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="AnswerTr3"></select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <input name="Question4" class="form-control form-control-lg" placeholder="Soru 4" />
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-4 ">
+                <input class="form-control form-control-lg" name="Answer4" placeholder="A)" />
+            </div>
+            <div class="offset-1 col-4">
+                <input class="form-control form-control-lg" name="Answer4" placeholder="B)" />
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-4">
+                <input class="form-control form-control-lg" name="Answer4" placeholder="C)" />
+            </div>
+            <div class="offset-1 col-4">
+                <input class="form-control form-control-lg" name="Answer4" placeholder="D)" />
+                <div class="col-4 align-self-auto">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="AnswerTr4"></select>
+                </div>
+            </div>
+            <div class="container">
+                <div class="justify-content-center ">
+                    <button id="btnId" class="btn btn-light  border border-dark ">Sınav Oluştur</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div style="display:none" ;>
+        <input class="form-control form-control-lg" name="True1" />
+        <input class="form-control form-control-lg" name="True2" />
+        <input class="form-control form-control-lg" name="True3" />
+        <input class="form-control form-control-lg" name="True4" />
+        <input class="form-control form-control-lg" name="TitleTr" />
+        <input class="form-control form-control-lg" name="TitleTd" />
+    </div>
+
+</form>
+<script>
+    $(document).ready(function () {
+        $("#TitleId").change(function () {
+            var id = $(this).val();
+
+            $.ajax({
+                contentType: "application/json",
+                dataType: 'Json',
+                type: "get",
+                url: '/WeridArticle/DescList/',
+                data: { 'id': id },
+                success: function (data) {
+                    let w = jQuery.parseJSON(data);
+                    let getvalue = `<p>${w.Description}</p>`;
+                    $("#getke").html(getvalue);
+
+                }
+
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        $('input[name="Answer1"]').change(function () {
+            var changes = $(this).val();
+            var o = new Option("option text", "value");
+            $("#AnswerTr").append($('<option>',
+                {
+                    value: changes,
+                    text: changes
+                }));
+        });
+    });
+
+    $(document).ready(function () {
+        $('input[name="Answer2"]').change(function () {
+            var changes = $(this).val();
+
+            var o = new Option("option text", "value");
+            $("#AnswerTr2").append($('<option>',
+                {
+                    value: changes,
+                    text: changes
+                }));
+        });
+    });
+
+    $(document).ready(function () {
+        $('input[name="Answer3"]').change(function () {
+            var changes = $(this).val();
+
+            var o = new Option("option text", "value");
+            $("#AnswerTr3").append($('<option>',
+                {
+                    value: changes,
+                    text: changes
+                }));
+        });
+    });
+
+    $(document).ready(function () {
+        $('input[name="Answer4"]').change(function () {
+            var changes = $(this).val();
+
+            var o = new Option("option text", "value");
+            $("#AnswerTr4").append($('<option>',
+                {
+                    value: changes,
+                    text: changes
+                }));
+        });
+    });
+
+    $(document).ready(function () {
+        $("#btnId").click(function () {
+            var id = $("#TitleId").val();
+            var id2 = $("#TitleId option:selected").text();
+            var tr1 = $("#AnswerTr option:selected").text();
+            var tr2 = $("#AnswerTr2 option:selected").text();
+            var tr3 = $("#AnswerTr3 option:selected").text();
+            var tr4 = $("#AnswerTr4 option:selected").text();
+            console.log(tr1);
+            console.log(tr2);
+            console.log(tr3);
+            console.log(tr4);
+            $('input[name="True1"]').val(tr1);
+            $('input[name="True2"]').val(tr2);
+            $('input[name="True3"]').val(tr3);
+            $('input[name="True4"]').val(tr4);
+            $('input[name="TitleTr"]').val(id);
+            $('input[name="TitleTd"]').val(id2);
+        });
+    });
+</script>

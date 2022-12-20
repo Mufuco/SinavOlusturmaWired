@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectTek.BusinessLayer", "ProjectTek.BusinessLayer\ProjectTek.BusinessLayer.csproj", "{6AE46C44-754D-4F56-A387-167DA20DBBB5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectTek.CoreLayer", "ProjectTek.CoreLayer\ProjectTek.CoreLayer.csproj", "{C0AE6203-0CCD-4D16-89B8-9D9AE84180A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectTek.DataAccesLayer", "ProjectTek.DataAccesLayer\ProjectTek.DataAccesLayer.csproj", "{720B7C02-BAAD-4B14-98DE-4C225E930DF7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectTek.EntityLayer", "ProjectTek.EntityLayer\ProjectTek.EntityLayer.csproj", "{28B13B3B-4C18-4BCD-AF04-76AD16C04A41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectTek", "ProjectTek\ProjectTek.csproj", "{1696CE0B-433F-432B-9C02-CE918C207B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTek.Api.JWT", "ProjectTek.Api.JWT\ProjectTek.Api.JWT.csproj", "{4CAF3C8C-333C-461E-AF5A-E9408E35CD6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AE46C44-754D-4F56-A387-167DA20DBBB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE46C44-754D-4F56-A387-167DA20DBBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE46C44-754D-4F56-A387-167DA20DBBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE46C44-754D-4F56-A387-167DA20DBBB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0AE6203-0CCD-4D16-89B8-9D9AE84180A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0AE6203-0CCD-4D16-89B8-9D9AE84180A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0AE6203-0CCD-4D16-89B8-9D9AE84180A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0AE6203-0CCD-4D16-89B8-9D9AE84180A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{720B7C02-BAAD-4B14-98DE-4C225E930DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{720B7C02-BAAD-4B14-98DE-4C225E930DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{720B7C02-BAAD-4B14-98DE-4C225E930DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{720B7C02-BAAD-4B14-98DE-4C225E930DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B13B3B-4C18-4BCD-AF04-76AD16C04A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B13B3B-4C18-4BCD-AF04-76AD16C04A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B13B3B-4C18-4BCD-AF04-76AD16C04A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B13B3B-4C18-4BCD-AF04-76AD16C04A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1696CE0B-433F-432B-9C02-CE918C207B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1696CE0B-433F-432B-9C02-CE918C207B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1696CE0B-433F-432B-9C02-CE918C207B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1696CE0B-433F-432B-9C02-CE918C207B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CAF3C8C-333C-461E-AF5A-E9408E35CD6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CAF3C8C-333C-461E-AF5A-E9408E35CD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CAF3C8C-333C-461E-AF5A-E9408E35CD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CAF3C8C-333C-461E-AF5A-E9408E35CD6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41B9B5CE-ADB2-4C70-9FFD-42D404FF79E1}
+	EndGlobalSection
+EndGlobal

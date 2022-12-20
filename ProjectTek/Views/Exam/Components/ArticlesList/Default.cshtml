@@ -1,0 +1,22 @@
+﻿@model List<WiredArticle>
+@{
+    Layout = null;
+}
+
+<div class="container mt-5 ">
+    <div class="row">
+
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="TitleId" name="Titles">
+                    <option>Başlık Seçiniz<</option>
+                    @foreach (var item in Model)
+                    {
+                        <option name="ItemTitle" value="@item.Id"><strong>@item.Title</strong></option>
+                    }
+                </select>
+        
+        <div class="col-12 border" style="border-width: 2px!important;" id="getke"></div>
+    </>
+</div>
+</div>
+
+

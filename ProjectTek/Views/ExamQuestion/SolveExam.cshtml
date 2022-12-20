@@ -1,0 +1,70 @@
+﻿@model List<ExamQuestion>
+@{
+    ViewData["Title"] = "SolveExam";
+    Layout = "~/Views/Shared/_LayoutRe.cshtml";
+}
+@await Component.InvokeAsync("ArticleListQuestion",new{id=ViewBag.i})
+
+<div class="d-flex justify-content-center">
+
+    <table class="table table-borderless">
+
+        @foreach (var item in Model)
+        {
+
+            <tr><td>@item.Question</td></tr>
+
+            <tr>
+                <td>
+
+                    <div class="d-flex justify-content-center row mt-4">
+
+                        @foreach (var ans in item.answers)
+                        {
+                            <div class="col border border-dark rounded" style="margin" name="@ans.Id">
+                                <input type="radio" id="@ans.Id" name="Answer+@ans.ExamQuestionId" value="Ans+@ans.State" /><a>@ans.QuestionAnswer </a>
+                            </div>
+                        }
+
+
+                    </div>
+
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <button id="btn"class="btn btn-light  border border-dark ">Sınavı Tamamla</button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#btn").click(function () {
+            var truek = "Ans+True"
+            $('input[type=radio]:checked').val();
+
+            var results = document.getElementsByTagName('input');
+            for (i = 0; i < results.length; i++) {
+                if (results[i].type == "radio") {
+                    if (results[i].checked) {
+                        if (results[i].defaultValue == truek) {
+                            var idtr = results[i].id;
+                            $('div[name="' + idtr + '"]').css("background-color", "green");
+                        }
+                        else {
+                            var idyn = results[i].id;
+                            $('div[name="' + idyn + '"]').css("background-color", "red");
+
+                        }
+                    }
+                }
+            }
+        });
+    });
+
+</script>
+
