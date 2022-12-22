@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjectTek.CoreLayer.Repositoires.UserRep;
 using ProjectTek.EntityLayer.Entities;
-using ProjectTek.EntityLayer.ViewModels;
 using System.Security.Claims;
 
 namespace ProjectTek.Controllers

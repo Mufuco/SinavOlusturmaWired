@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.ObjectPool;
 using ProjectTek.BusinessLayer.Validators;
 using ProjectTek.CoreLayer.Repositoires.AnswerRep;
 using ProjectTek.CoreLayer.Repositoires.ExamQuesitonRep;
@@ -23,6 +24,12 @@ namespace ProjectTek.BusinessLayer.Services
     {
         public static void AddBusinessServices(this IServiceCollection services)
         {
+            services.AddSingleton<ObjectPoolProvider, DefaultObjectPoolProvider>();
+            services.AddSingleton(p =>
+            {
+                var pool = p.GetService<ObjectPoolProvider>();
+                return pool.Create<WiredFullService>();
+            });
 
             services.AddFluentValidation(config => config.RegisterValidatorsFromAssemblyContaining<UserValidator>());
 

@@ -2548,6 +2548,7 @@
       "ProjectTek.BusinessLayer/1.0.0": {
         "dependencies": {
           "FluentValidation.AspNetCore": "11.2.2",
+          "HtmlAgilityPack.NetCore": "1.5.0.1",
           "ProjectTek.CoreLayer": "1.0.0",
           "ProjectTek.EntityLayer": "1.0.0"
         },

@@ -1,36 +1,32 @@
-﻿using HtmlAgilityPack;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.ObjectPool;
 using Newtonsoft.Json;
 using ProjectTek.BusinessLayer.Services;
 using ProjectTek.CoreLayer.Repositoires.WiredArticleRep;
 using ProjectTek.EntityLayer.Entities;
 using ProjectTek.EntityLayer.ViewModels;
-using System.Collections.Generic;
-using System.Net;
-using System.Text;
 using System.Xml.Linq;
-using static System.Net.WebRequestMethods;
 
 namespace ProjectTek.Controllers
 {
     public class WeridArticleController : Controller
     {
-        IWiredArticleWriteRepository _wiredWrite;
-        IWiredArticleReadRepository _wiredRead;
+      private readonly  IWiredArticleWriteRepository _wiredWrite;
+        private readonly IWiredArticleReadRepository _wiredRead;
+        private readonly ObjectPool<WiredFullService> _pool;
 
-
-        public WeridArticleController(IWiredArticleWriteRepository wiredWrite, IWiredArticleReadRepository wiredRead)
+        public WeridArticleController(IWiredArticleWriteRepository wiredWrite, IWiredArticleReadRepository wiredRead, ObjectPool<WiredFullService> pool)
         {
             _wiredWrite = wiredWrite;
             _wiredRead = wiredRead;
-
+            _pool = pool;
         }
 
         [HttpGet]
         public IActionResult Index()
         {
             List<VM_WeridArticle> vmList = new();
-            XDocument xDoc = new XDocument();
+            XDocument xDoc = new ();
             xDoc = XDocument.Load(ReadStrings.ConnectionString()); ;
 
             var items = (from x in xDoc.Descendants("item")
@@ -48,7 +44,7 @@ namespace ProjectTek.Controllers
             {
                 if (i != 5)
                 {
-                    if (_wiredRead.GetAll().Where(x => x.Link == item.Link).Count() == 0)
+                    if (_wiredRead.GetAll().Where(x => x.Link == item.Link).Any() == false)
                     {
                         i++;
                         var articles = new WiredArticle
@@ -80,22 +76,16 @@ namespace ProjectTek.Controllers
         public JsonResult DescList(int id)
         {
             var artic = _wiredRead.GetById(id);
-            VM_WeridArticle ann = new();
+            var poolit = _pool.Get();
 
-            string link = artic.Link.ToString();
+            string desc = poolit.GetArticle(artic.Link.ToString());
 
-            Uri url = new Uri(link);
-            WebClient client = new();
-            client.Encoding = Encoding.UTF8;
-            string html = client.DownloadString(url);
-            HtmlAgilityPack.HtmlDocument document = new HtmlAgilityPack.HtmlDocument();
-            document.LoadHtml(html);
-            StringBuilder metin = new StringBuilder();
-            HtmlNodeCollection secilenHtmlList = document.DocumentNode.SelectNodes("/html/body/div[1]/div/main/article/div[2]/div/div[1]/div[1]/div[1]");
-            if (secilenHtmlList != null)
+            _pool.Return(poolit);
+
+            if (desc!=null)
             {
-                ann.Description = secilenHtmlList.ToList().FirstOrDefault().InnerText.Trim().ToString(); ;
-                var jsonDesc = JsonConvert.SerializeObject(ann);
+                artic.Description = desc;
+                var jsonDesc = JsonConvert.SerializeObject(artic);
                 return Json(jsonDesc);
             }
             else

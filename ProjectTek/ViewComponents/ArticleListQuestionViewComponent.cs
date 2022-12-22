@@ -1,6 +1,8 @@
 ﻿using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.ObjectPool;
 using Newtonsoft.Json;
+using ProjectTek.BusinessLayer.Services;
 using ProjectTek.CoreLayer.Repositoires.WiredArticleRep;
 using ProjectTek.EntityLayer.Entities;
 using ProjectTek.EntityLayer.ViewModels;
@@ -12,33 +14,30 @@ namespace ProjectTek.ViewComponents
     public class ArticleListQuestionViewComponent : ViewComponent
     {
         private readonly IWiredArticleReadRepository _articleRead;
+        private readonly ObjectPool<WiredFullService> _pool;
 
-        public ArticleListQuestionViewComponent(IWiredArticleReadRepository articleRead)
+        public ArticleListQuestionViewComponent(IWiredArticleReadRepository articleRead, ObjectPool<WiredFullService> pool)
         {
             _articleRead = articleRead;
+            _pool = pool;
         }
 
         public IViewComponentResult Invoke(int id)
         {
             WiredArticle art = _articleRead.GetById(id);
-            string link = art.Link.ToString();
+            var poolit = _pool.Get();
+            string desc = poolit.GetArticle(art.Link.ToString());
 
-            Uri url = new Uri(link);
-            WebClient client = new();
-            client.Encoding = Encoding.UTF8;
-            string html = client.DownloadString(url);
-            HtmlAgilityPack.HtmlDocument document = new HtmlAgilityPack.HtmlDocument();
-            document.LoadHtml(html);
-            StringBuilder metin = new StringBuilder();
-            HtmlNodeCollection secilenHtmlList = document.DocumentNode.SelectNodes("/html/body/div[1]/div/main/article/div[2]/div/div[1]/div[1]/div[1]");
+            _pool.Return(poolit);
 
-            if (secilenHtmlList != null) {    
-                art.Description = secilenHtmlList.ToList().FirstOrDefault().InnerText.Trim().ToString();
+            if (desc != null)
+            {
+                art.Description = desc;
 
                 return View(art);
             }
+            else { return View(art); }
 
-            return View(art);
         }
     }
 }

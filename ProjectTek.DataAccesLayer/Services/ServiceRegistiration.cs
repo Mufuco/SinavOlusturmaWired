@@ -2,6 +2,7 @@
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.ObjectPool;
 using ProjectTek.CoreLayer.Repositoires.AnswerRep;
 using ProjectTek.CoreLayer.Repositoires.ExamQuesitonRep;
 using ProjectTek.CoreLayer.Repositoires.ExamRep;
@@ -32,6 +33,7 @@ namespace ProjectTek.DataAccesLayer.Services
             services.AddSingleton<IUserWriteRepository, UserWriteRepository>();
             services.AddSingleton<IWiredArticleWriteRepository, WiredArticlesWriteRepository>();
             services.AddSingleton<IWiredArticleReadRepository, WiredArticlesReadRepository>();
+           
 
 
 
